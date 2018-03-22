@@ -13,6 +13,8 @@ public class Recipe {
     private int amtSugar;
     private int amtChocolate;
     
+    
+    
     /**
      * Method getAmtChocolate.
      * @return int

@@ -1,0 +1,1 @@
+Only violation left for Refactoring audit was a violation due to vars not being final, but that wouldn't be practical in this case. 

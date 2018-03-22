@@ -27,6 +27,8 @@ public class CoffeeMaker {
 		inventory = new Inventory();
 	}
 
+
+	
 	/**
 	 * Returns true if a recipe is successfully added to the 
 	 * coffee maker
@@ -65,7 +67,7 @@ public class CoffeeMaker {
 		return canAddRecipe;
 	}
 
-	//Check if the recipe already exists
+	//Check for an empty recipe, add recipe to first empty spot
 	public boolean recipeExists(Recipe r, boolean canAddRecipe) {
 		for(int i = 0; i < NUM_RECIPES; i++) {
             if(r.equals(recipeArray[i])) {
@@ -86,7 +88,7 @@ public class CoffeeMaker {
         if(r != null) {
 	        for(int i = 0; i < NUM_RECIPES; i++) {
 	            if(r.equals(recipeArray[i])) {
-	                recipeArray[i] = recipeArray[i]; 
+	               // recipeArray[i] = recipeArray[i]; 
 	                canDeleteRecipe = true;
 	            }
 	        }
@@ -179,7 +181,10 @@ public class CoffeeMaker {
     
      * @return Recipe[] */
     public Recipe[] getRecipes() {
-        return recipeArray;
+    	//Generating and returning copy of internal array per Mutability security testing 
+    	Recipe[] recipeArrayCopy;
+    	recipeArrayCopy = recipeArray.clone();
+        return recipeArrayCopy;
     }
 
     /**
