@@ -191,8 +191,8 @@ public class CoffeeMaker {
     	//Generating and returning copy of internal array per Mutability security testing 
     	Recipe[] recipeArrayCopy;
     	recipeArrayCopy = recipeArray.clone();
-        return recipeArrayCopy;
-    }
+        return recipeArrayCopy; 
+    } 
 
     /**
      * Returns the Recipe associated with the given name
@@ -202,12 +202,12 @@ public class CoffeeMaker {
 	public Recipe getRecipeForName(String name) {
 		Recipe r = new Recipe();
 		for(int i = 0; i < NUM_RECIPES; i++) {
-			if(recipeArray[i].getName() != null) { 
+			if(recipeArray[i].getName() != null) {  
 				if((recipeArray[i].getName()).equals(name)) {
-					r = recipeArray[i];
-				}
+					r = recipeArray[i];  
+				} 
 			}
 		}
-		return r;
+		return r; 
 	}
 }

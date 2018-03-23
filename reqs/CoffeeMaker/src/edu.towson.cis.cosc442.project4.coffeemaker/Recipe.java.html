@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../../jacoco-resources/report.gif" type="image/gif"/><title>Recipe.java</title><link rel="stylesheet" href="../../../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../../../index.html" class="el_report">CoffeeMaker (Mar 22, 2018 9:23:29 PM)</a> &gt; <a href="../../index.html" class="el_group">CoffeeMaker</a> &gt; <a href="../index.html" class="el_bundle">src</a> &gt; <a href="index.source.html" class="el_package">edu.towson.cis.cosc442.project4.coffeemaker</a> &gt; <span class="el_source">Recipe.java</span></div><h1>Recipe.java</h1><pre class="source lang-java linenums">package edu.towson.cis.cosc442.project4.coffeemaker;
+
+/**
+ * Recipe object for the coffee maker
+ * @author Josh
+ * @version $Revision: 1.0 $
+ */
+<span class="fc" id="L8">public class Recipe {</span>
+    private String name;
+    private int price;
+    private int amtCoffee;
+    private int amtMilk;
+    private int amtSugar;
+    private int amtChocolate;
+    
+    
+    
+    /**
+     * Method getAmtChocolate.
+     * @return int
+     */
+    public int getAmtChocolate() {
+<span class="fc" id="L23">        return amtChocolate;</span>
+    }
+    /**
+     * Method setAmtChocolate.
+     * @param amtChocolate int
+     */
+    public void setAmtChocolate(int amtChocolate) {
+<span class="fc bfc" id="L30" title="All 2 branches covered.">    	if(amtChocolate &gt;= 0) {</span>
+<span class="fc" id="L31">    		this.amtChocolate = amtChocolate;</span>
+<span class="fc" id="L32">    	}</span>
+    	else {
+<span class="fc" id="L34">    		this.amtChocolate = 0;</span>
+    	}
+<span class="fc" id="L36">    }</span>
+    /**
+     * Method getAmtCoffee.
+     * @return int
+     */
+    public int getAmtCoffee() {
+<span class="fc" id="L42">        return amtCoffee;</span>
+    }
+    /**
+     * Method setAmtCoffee.
+     * @param amtCoffee int
+     */
+    public void setAmtCoffee(int amtCoffee) {
+<span class="fc bfc" id="L49" title="All 2 branches covered.">    	if(amtCoffee &gt;= 0) {</span>
+<span class="fc" id="L50">    		this.amtCoffee = amtCoffee;</span>
+<span class="fc" id="L51">    	}</span>
+    	else {
+<span class="fc" id="L53">    		this.amtCoffee = 0;</span>
+    	}
+<span class="fc" id="L55">    }</span>
+    /**
+     * Method getAmtMilk.
+     * @return int
+     */
+    public int getAmtMilk() {
+<span class="fc" id="L61">        return amtMilk;</span>
+    }
+    /**
+     * Method setAmtMilk.
+     * @param amtMilk int
+     */
+    public void setAmtMilk(int amtMilk) {
+<span class="fc bfc" id="L68" title="All 2 branches covered.">    	if(amtMilk &gt;= 0) {</span>
+<span class="fc" id="L69">    		this.amtMilk = amtMilk;</span>
+<span class="fc" id="L70">    	}</span>
+    	else {
+<span class="fc" id="L72">    		this.amtMilk = 0;</span>
+    	}
+<span class="fc" id="L74">    }</span>
+    /**
+     * Method getAmtSugar.
+     * @return int
+     */
+    public int getAmtSugar() {
+<span class="fc" id="L80">        return amtSugar;</span>
+    }
+    /**
+     * Method setAmtSugar.
+     * @param amtSugar int
+     */
+    public void setAmtSugar(int amtSugar) {
+<span class="fc bfc" id="L87" title="All 2 branches covered.">    	if(amtSugar &gt;= 0) {</span>
+<span class="fc" id="L88">    		this.amtSugar = amtSugar;</span>
+<span class="fc" id="L89">    	}</span>
+    	else {
+<span class="fc" id="L91">    		this.amtSugar = 0;</span>
+    	}
+<span class="fc" id="L93">    }</span>
+    /**
+     * Method getName.
+     * @return String
+     */
+    public String getName() {
+<span class="fc" id="L99">        return name;</span>
+    }
+    /**
+     * Method setName.
+     * @param name String
+     */
+    public void setName(String name) {
+<span class="fc" id="L106">        this.name = name;</span>
+<span class="fc" id="L107">    }</span>
+    /**
+     * Method getPrice.
+     * @return int
+     */
+    public int getPrice() {
+<span class="fc" id="L113">        return price;</span>
+    }
+    /**
+     * Method setPrice.
+     * @param price int
+     */
+    public void setPrice(int price) {
+<span class="fc bfc" id="L120" title="All 2 branches covered.">    	if(price &gt;= 0) {</span>
+<span class="fc" id="L121">    		this.price = price;</span>
+<span class="fc" id="L122">    	}</span>
+    	else {
+<span class="fc" id="L124">    		this.price = 0;</span>
+    	}
+<span class="fc" id="L126">    } </span>
+    /**
+     * Method equals.
+     * @param r Recipe
+     * @return boolean
+     */
+    public boolean equals(Recipe r) {
+<span class="fc bfc" id="L133" title="All 2 branches covered.">        if(r.getName() == null) {</span>
+<span class="fc" id="L134">	    	return false;</span>
+    	}	
+<span class="fc bfc" id="L136" title="All 2 branches covered.">        if(this.name == null) {</span>
+<span class="fc" id="L137">        	return false;</span>
+        }
+<span class="pc bpc" id="L139" title="1 of 2 branches missed.">        if((this.name).equals(r.getName())) {</span>
+<span class="fc" id="L140">            return true;</span>
+        }
+<span class="nc" id="L142">        return false;</span>
+    }
+    /**
+     * Method toString.
+     * @return String
+     */
+    public String toString() {
+<span class="fc" id="L149">    	return name;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span>CoffeeMaker (Mar 22, 2018 9:23:29 PM)</div></body></html>

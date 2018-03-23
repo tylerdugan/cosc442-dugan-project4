@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../../jacoco-resources/report.gif" type="image/gif"/><title>InventoryTest.java</title><link rel="stylesheet" href="../../../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../../../index.html" class="el_report">CoffeeMaker (Mar 22, 2018 9:23:29 PM)</a> &gt; <a href="../../index.html" class="el_group">CoffeeMaker</a> &gt; <a href="../index.html" class="el_bundle">src</a> &gt; <a href="index.source.html" class="el_package">edu.towson.cis.cosc442.project4.coffeemaker</a> &gt; <span class="el_source">InventoryTest.java</span></div><h1>InventoryTest.java</h1><pre class="source lang-java linenums">package edu.towson.cis.cosc442.project4.coffeemaker;
+
+import org.junit.*;
+import static org.junit.Assert.*;
+
+/**
+ * The class &lt;code&gt;InventoryTest&lt;/code&gt; contains tests for the class &lt;code&gt;{@link Inventory}&lt;/code&gt;.
+ *
+ * @generatedBy CodePro at 3/22/18 8:49 PM
+ * @author tyler
+ * @version $Revision: 1.0 $
+ */
+<span class="fc" id="L13">public class InventoryTest {</span>
+	/**
+	 * Run the Inventory() constructor test.
+	 *
+	 * @throws Exception
+	 *
+	 * @generatedBy CodePro at 3/22/18 8:49 PM
+	 */
+	@Test
+	public void testInventory_1()
+		throws Exception {
+
+<span class="fc" id="L25">		Inventory result = new Inventory();</span>
+
+		// add additional test code here
+<span class="fc" id="L28">		assertNotNull(result);</span>
+<span class="fc" id="L29">		assertEquals(&quot;Coffee: 15\r\nMilk: 15\r\nSugar: 15\r\nChocolate: 15\r\n&quot;, result.toString());</span>
+<span class="fc" id="L30">		assertEquals(15, result.getCoffee());</span>
+<span class="fc" id="L31">		assertEquals(15, result.getChocolate());</span>
+<span class="fc" id="L32">		assertEquals(15, result.getMilk());</span>
+<span class="fc" id="L33">		assertEquals(15, result.getSugar());</span>
+<span class="fc" id="L34">	}</span>
+
+	/**
+	 * Run the boolean enoughIngredients(Recipe) method test.
+	 *
+	 * @throws Exception
+	 *
+	 * @generatedBy CodePro at 3/22/18 8:49 PM
+	 */
+	@Test
+	public void testEnoughIngredients_1()
+		throws Exception {
+<span class="fc" id="L46">		Inventory fixture = new Inventory();</span>
+<span class="fc" id="L47">		Recipe r = new Recipe();</span>
+
+<span class="fc" id="L49">		boolean result = fixture.enoughIngredients(r);</span>
+
+		// add additional test code here
+<span class="fc" id="L52">		assertEquals(true, result);</span>
+<span class="fc" id="L53">	}</span>
+
+	/**
+	 * Run the boolean enoughIngredients(Recipe) method test.
+	 *
+	 * @throws Exception
+	 *
+	 * @generatedBy CodePro at 3/22/18 8:49 PM
+	 */
+	@Test
+	public void testEnoughIngredients_2()
+		throws Exception {
+<span class="fc" id="L65">		Inventory fixture = new Inventory();</span>
+<span class="fc" id="L66">		Recipe r = new Recipe();</span>
+
+<span class="fc" id="L68">		boolean result = fixture.enoughIngredients(r);</span>
+
+		// add additional test code here
+<span class="fc" id="L71">		assertEquals(true, result);</span>
+<span class="fc" id="L72">	}</span>
+
+	/**
+	 * Run the int getChocolate() method test.
+	 *
+	 * @throws Exception
+	 *
+	 * @generatedBy CodePro at 3/22/18 8:49 PM
+	 */
+	@Test
+	public void testGetChocolate_1()
+		throws Exception {
+<span class="fc" id="L84">		Inventory fixture = new Inventory();</span>
+
+<span class="fc" id="L86">		int result = fixture.getChocolate();</span>
+
+		// add additional test code here
+<span class="fc" id="L89">		assertEquals(15, result);</span>
+<span class="fc" id="L90">	}</span>
+
+	/**
+	 * Run the int getCoffee() method test.
+	 *
+	 * @throws Exception
+	 *
+	 * @generatedBy CodePro at 3/22/18 8:49 PM
+	 */
+	@Test
+	public void testGetCoffee_1()
+		throws Exception {
+<span class="fc" id="L102">		Inventory fixture = new Inventory();</span>
+
+<span class="fc" id="L104">		int result = fixture.getCoffee();</span>
+
+		// add additional test code here
+<span class="fc" id="L107">		assertEquals(15, result);</span>
+<span class="fc" id="L108">	}</span>
+
+	/**
+	 * Run the int getMilk() method test.
+	 *
+	 * @throws Exception
+	 *
+	 * @generatedBy CodePro at 3/22/18 8:49 PM
+	 */
+	@Test
+	public void testGetMilk_1()
+		throws Exception {
+<span class="fc" id="L120">		Inventory fixture = new Inventory();</span>
+
+<span class="fc" id="L122">		int result = fixture.getMilk();</span>
+
+		// add additional test code here
+<span class="fc" id="L125">		assertEquals(15, result);</span>
+<span class="fc" id="L126">	}</span>
+
+	/**
+	 * Run the int getSugar() method test.
+	 *
+	 * @throws Exception
+	 *
+	 * @generatedBy CodePro at 3/22/18 8:49 PM
+	 */
+	@Test
+	public void testGetSugar_1()
+		throws Exception {
+<span class="fc" id="L138">		Inventory fixture = new Inventory();</span>
+
+<span class="fc" id="L140">		int result = fixture.getSugar();</span>
+
+		// add additional test code here
+<span class="fc" id="L143">		assertEquals(15, result);</span>
+<span class="fc" id="L144">	}</span>
+
+	/**
+	 * Run the void setChocolate(int) method test.
+	 *
+	 * @throws Exception
+	 *
+	 * @generatedBy CodePro at 3/22/18 8:49 PM
+	 */
+	@Test
+	public void testSetChocolate_1()
+		throws Exception {
+<span class="fc" id="L156">		Inventory fixture = new Inventory();</span>
+<span class="fc" id="L157">		int chocolate = -1;</span>
+
+<span class="fc" id="L159">		fixture.setChocolate(chocolate);</span>
+
+		// add additional test code here
+<span class="fc" id="L162">	}</span>
+
+	/**
+	 * Run the void setChocolate(int) method test.
+	 *
+	 * @throws Exception
+	 *
+	 * @generatedBy CodePro at 3/22/18 8:49 PM
+	 */
+	@Test
+	public void testSetChocolate_2()
+		throws Exception {
+<span class="fc" id="L174">		Inventory fixture = new Inventory();</span>
+<span class="fc" id="L175">		int chocolate = 1;</span>
+
+<span class="fc" id="L177">		fixture.setChocolate(chocolate);</span>
+
+		// add additional test code here
+<span class="fc" id="L180">	}</span>
+
+	/**
+	 * Run the void setCoffee(int) method test.
+	 *
+	 * @throws Exception
+	 *
+	 * @generatedBy CodePro at 3/22/18 8:49 PM
+	 */
+	@Test
+	public void testSetCoffee_1()
+		throws Exception {
+<span class="fc" id="L192">		Inventory fixture = new Inventory();</span>
+<span class="fc" id="L193">		int coffee = -1;</span>
+
+<span class="fc" id="L195">		fixture.setCoffee(coffee);</span>
+
+		// add additional test code here
+<span class="fc" id="L198">	}</span>
+
+	/**
+	 * Run the void setCoffee(int) method test.
+	 *
+	 * @throws Exception
+	 *
+	 * @generatedBy CodePro at 3/22/18 8:49 PM
+	 */
+	@Test
+	public void testSetCoffee_2()
+		throws Exception {
+<span class="fc" id="L210">		Inventory fixture = new Inventory();</span>
+<span class="fc" id="L211">		int coffee = 1;</span>
+
+<span class="fc" id="L213">		fixture.setCoffee(coffee);</span>
+
+		// add additional test code here
+<span class="fc" id="L216">	}</span>
+
+	/**
+	 * Run the void setMilk(int) method test.
+	 *
+	 * @throws Exception
+	 *
+	 * @generatedBy CodePro at 3/22/18 8:49 PM
+	 */
+	@Test
+	public void testSetMilk_1()
+		throws Exception {
+<span class="fc" id="L228">		Inventory fixture = new Inventory();</span>
+<span class="fc" id="L229">		int milk = -1;</span>
+
+<span class="fc" id="L231">		fixture.setMilk(milk);</span>
+
+		// add additional test code here
+<span class="fc" id="L234">	}</span>
+
+	/**
+	 * Run the void setMilk(int) method test.
+	 *
+	 * @throws Exception
+	 *
+	 * @generatedBy CodePro at 3/22/18 8:49 PM
+	 */
+	@Test
+	public void testSetMilk_2()
+		throws Exception {
+<span class="fc" id="L246">		Inventory fixture = new Inventory();</span>
+<span class="fc" id="L247">		int milk = 1;</span>
+
+<span class="fc" id="L249">		fixture.setMilk(milk);</span>
+
+		// add additional test code here
+<span class="fc" id="L252">	}</span>
+
+	/**
+	 * Run the void setSugar(int) method test.
+	 *
+	 * @throws Exception
+	 *
+	 * @generatedBy CodePro at 3/22/18 8:49 PM
+	 */
+	@Test
+	public void testSetSugar_1()
+		throws Exception {
+<span class="fc" id="L264">		Inventory fixture = new Inventory();</span>
+<span class="fc" id="L265">		int sugar = -1;</span>
+
+<span class="fc" id="L267">		fixture.setSugar(sugar);</span>
+
+		// add additional test code here
+<span class="fc" id="L270">	}</span>
+
+	/**
+	 * Run the void setSugar(int) method test.
+	 *
+	 * @throws Exception
+	 *
+	 * @generatedBy CodePro at 3/22/18 8:49 PM
+	 */
+	@Test
+	public void testSetSugar_2()
+		throws Exception {
+<span class="fc" id="L282">		Inventory fixture = new Inventory();</span>
+<span class="fc" id="L283">		int sugar = 1;</span>
+
+<span class="fc" id="L285">		fixture.setSugar(sugar);</span>
+
+		// add additional test code here
+<span class="fc" id="L288">	}</span>
+
+	/**
+	 * Run the String toString() method test.
+	 *
+	 * @throws Exception
+	 *
+	 * @generatedBy CodePro at 3/22/18 8:49 PM
+	 */
+	@Test
+	public void testToString_1()
+		throws Exception {
+<span class="fc" id="L300">		Inventory fixture = new Inventory();</span>
+
+<span class="fc" id="L302">		String result = fixture.toString();</span>
+
+		// add additional test code here
+<span class="fc" id="L305">		assertEquals(&quot;Coffee: 15\r\nMilk: 15\r\nSugar: 15\r\nChocolate: 15\r\n&quot;, result);</span>
+<span class="fc" id="L306">	}</span>
+
+	/**
+	 * Perform pre-test initialization.
+	 *
+	 * @throws Exception
+	 *         if the initialization fails for some reason
+	 *
+	 * @generatedBy CodePro at 3/22/18 8:49 PM
+	 */
+	@Before
+	public void setUp()
+		throws Exception {
+		// add additional set up code here
+<span class="fc" id="L320">	}</span>
+
+	/**
+	 * Perform post-test clean-up.
+	 *
+	 * @throws Exception
+	 *         if the clean-up fails for some reason
+	 *
+	 * @generatedBy CodePro at 3/22/18 8:49 PM
+	 */
+	@After
+	public void tearDown()
+		throws Exception {
+		// Add additional tear down code here
+<span class="fc" id="L334">	}</span>
+
+	/**
+	 * Launch the test.
+	 *
+	 * @param args the command line arguments
+	 *
+	 * @generatedBy CodePro at 3/22/18 8:49 PM
+	 */
+	public static void main(String[] args) {
+<span class="nc" id="L344">		new org.junit.runner.JUnitCore().run(InventoryTest.class);</span>
+<span class="nc" id="L345">	}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span>CoffeeMaker (Mar 22, 2018 9:23:29 PM)</div></body></html>
