@@ -218,8 +218,15 @@ public class Main {
 	    if(amtChocolate < 0) {
 	    	mainMenu();
 	    }
-	    
+	   
         coffeeMaker.addInventory(amtCoffee, amtMilk, amtSugar, amtChocolate);
+        
+        System.lineSeparator();
+        
+        //Display inventory after adding to it
+        System.out.println("Inventory:" + System.lineSeparator() + 
+        coffeeMaker.checkInventory());
+        	
         mainMenu();
     }
     

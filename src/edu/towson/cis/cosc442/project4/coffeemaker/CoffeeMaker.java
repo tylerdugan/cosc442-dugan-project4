@@ -157,21 +157,28 @@ public class CoffeeMaker {
     
      * @return int */
     public int makeCoffee(Recipe r, int amtPaid) {
+    	String errMsg = ""; 
         boolean canMakeCoffee = true;
         if(amtPaid < r.getPrice()) {
             canMakeCoffee = false;
+            errMsg = "Not enough money added. Price: $" + r.getPrice();
+            
         }
         if(!inventory.enoughIngredients(r)) {
             canMakeCoffee = false;
+            errMsg = "Inventory too low for requested item";
+            
         }
         if(canMakeCoffee) {
 	        inventory.setCoffee(inventory.getCoffee() + r.getAmtCoffee()); 
 	        inventory.setMilk(inventory.getMilk() - r.getAmtMilk());
 	        inventory.setSugar(inventory.getSugar() - r.getAmtSugar());
 	        inventory.setChocolate(inventory.getChocolate() - r.getAmtChocolate());
+	        System.out.println("Thank you for your purchase");
             return amtPaid - r.getPrice();
         }
         else {
+        	System.out.println(errMsg);
             return amtPaid;
         }
     }
