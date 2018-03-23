@@ -2,6 +2,8 @@ package edu.towson.cis.cosc442.project4.coffeemaker;
 
 import static org.junit.Assert.assertArrayEquals;
 
+import java.util.Arrays;
+
 import org.junit.Assert;
 
 import junit.framework.TestCase;
@@ -74,7 +76,8 @@ public class CoffeeMakerTest extends TestCase {
 		testRecipeArray[testRecipeArray.length-1] = r1;
 		
 		
-		assertArrayEquals(testRecipeArray, cm.getRecipes()); 
+		//assertArrayEquals(testRecipeArray, cm.getRecipes()); 
+		assertEquals(Arrays.toString(testRecipeArray), Arrays.toString(cm.getRecipes()));
 	} 
 	
 	public void testGetRecipeForName() {
