@@ -1,5 +1,7 @@
 package edu.towson.cis.cosc442.project4.coffeemaker;
 
+import org.junit.Assert;
+
 import junit.framework.TestCase;
 
 /**
@@ -22,6 +24,14 @@ public class CoffeeMakerTest extends TestCase {
 		r1.setAmtSugar(1);
 		r1.setAmtChocolate(0);
 	}
+	
+	public void checkOptions() {
+		/**
+		 * This would technically be a test case for Main.java which we aren't implementing, but 
+		 * I added it here just because it was in the User Stories
+		 */
+		assertTrue(true);
+	}
 
 	public void testAddRecipe1() {
 		assertTrue(cm.addRecipe(r1));
@@ -38,5 +48,17 @@ public class CoffeeMakerTest extends TestCase {
 		newRecipe = r1;
 		newRecipe.setAmtSugar(2);
 		assertTrue(cm.editRecipe(r1, newRecipe));
+	}
+	
+	public void testAddInventory1() {
+		assertTrue(cm.addInventory(1, 1, 0, 1));
+	}
+	
+	public void testCheckInventory() {
+		assertEquals(cm.checkInventory(), i);
+	}
+	
+	public void testPurchaseBeverage1() {
+		assertEquals(cm.makeCoffee(r1, 50), 0); // assume purchase is made and no change is return 
 	}
 }
