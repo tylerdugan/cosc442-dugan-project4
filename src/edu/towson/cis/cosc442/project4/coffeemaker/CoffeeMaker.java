@@ -192,7 +192,7 @@ public class CoffeeMaker {
     	Recipe[] recipeArrayCopy;
     	recipeArrayCopy = recipeArray.clone();
         return recipeArrayCopy; 
-    } 
+    }  
 
     /**
      * Returns the Recipe associated with the given name
