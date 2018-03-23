@@ -39,7 +39,7 @@ public class CoffeeMakerTest extends TestCase {
 	}
 
 	public void testAddRecipe1() {
-		assertTrue(cm.addRecipe(r1));
+		assertTrue(cm.addRecipe(new Recipe()));
 	}
 
 	public void testDeleteRecipe1() {
@@ -70,10 +70,11 @@ public class CoffeeMakerTest extends TestCase {
 	public void testGetRecipe() { 
 		//assertEquals(r1, cm.getRecipes());
 		Recipe[] testRecipeArray;
-		testRecipeArray = new Recipe[1];
-		testRecipeArray[0] = r1;
+		testRecipeArray = new Recipe[4];
+		testRecipeArray[testRecipeArray.length-1] = r1;
 		
-		assertEquals(testRecipeArray, cm.getRecipes()); 
+		
+		assertArrayEquals(testRecipeArray, cm.getRecipes()); 
 	} 
 	
 	public void testGetRecipeForName() {
